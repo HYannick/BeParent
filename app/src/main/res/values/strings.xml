@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">BeParent</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bienvenue_sur_beparent">Bienvenue sur BeParent !</string>
+    <string name="onboarding">Onboarding</string>
+    <string name="cute_egg">cute egg</string>
 </resources>
