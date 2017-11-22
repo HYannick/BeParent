@@ -2,8 +2,8 @@
     android:id="@+id/my_content"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     android:gravity="center"
+    android:orientation="vertical"
     android:padding="20dp">
 
     <TextView
@@ -11,25 +11,28 @@
         style="?android:textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="30dp"
         android:gravity="center"
         android:lineSpacingMultiplier="1.2"
-        android:text="@string/onboarding" />
+        android:paddingBottom="16dp"
+        android:text="@string/onboarding"
+        android:textSize="20dp" />
 
     <ImageView
         android:id="@+id/cute_egg"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:src="@drawable/tamagochi_board"
-        android:contentDescription="@string/cute_egg" />
+        android:contentDescription="@string/cute_egg"
+        android:src="@drawable/tamagochi_board" />
+
     <TextView
         android:id="@+id/bottom_text"
         style="?android:textAppearanceMedium"
         android:layout_width="match_parent"
-        android:gravity="center"
-        android:paddingTop="30dp"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:lineSpacingMultiplier="1.2"
-        android:text="@string/onboarding" />
+        android:paddingTop="16dp"
+        android:text="@string/onboarding"
+        android:textSize="20dp" />
 
 </LinearLayout>
