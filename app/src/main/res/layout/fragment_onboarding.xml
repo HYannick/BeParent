@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/my_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/top_text"
+        style="?android:textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.2"
+        android:text="@string/onboarding" />
+
+    <ImageView
+        android:id="@+id/cute_egg"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/tamagochi_board"
+        android:contentDescription="@string/cute_egg" />
+    <TextView
+        android:id="@+id/bottom_text"
+        style="?android:textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:paddingTop="30dp"
+        android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="1.2"
+        android:text="@string/onboarding" />
+
+</LinearLayout>
