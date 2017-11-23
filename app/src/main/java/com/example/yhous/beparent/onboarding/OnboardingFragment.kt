@@ -1,17 +1,17 @@
-package com.example.yhous.beparent
+package com.example.yhous.beparent.onboarding
 
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.content.Context
 import android.graphics.Typeface
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import com.example.yhous.beparent.onboarding.Board
-import com.example.yhous.beparent.onboarding.BoardHelper
+import com.example.yhous.beparent.R
 
 /**
  * A simple [Fragment] subclass.
@@ -19,11 +19,12 @@ import com.example.yhous.beparent.onboarding.BoardHelper
 class OnboardingFragment : Fragment() {
 
     companion object {
-        fun newInstance(board: Board): OnboardingFragment {
+        fun newInstance(board: Board, position: Int): OnboardingFragment {
             val args = Bundle()
             args.putString(BoardHelper.TOP_TEXT, board.topText)
             args.putInt(BoardHelper.RESOURCE_IMG, board.resourceImg)
             args.putString(BoardHelper.BOTTOM_TEXT, board.bottomText)
+            args.putInt("position", position)
             val fragment = OnboardingFragment()
             fragment.arguments = args
             return fragment
@@ -44,11 +45,15 @@ class OnboardingFragment : Fragment() {
         topTitle.text = args.getString(BoardHelper.TOP_TEXT)
         imgBoard.setImageResource(args.getInt(BoardHelper.RESOURCE_IMG))
         bottomTitle.text = args.getString(BoardHelper.BOTTOM_TEXT)
+        val pos = args.getInt("position")
 
-        val mainTypeFace: Typeface = Typeface.createFromAsset(context.assets, "fonts/Handlee-Regular.ttf")
+        if(pos == 0) {
+            Log.d("no", "noppp")
+            topTitle.textSize = 48f
+        } else {
+            topTitle.textSize = 20f
+        }
 
-        topTitle.typeface = mainTypeFace
-        bottomTitle.typeface = mainTypeFace
         return view
     }
 

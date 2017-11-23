@@ -6,4 +6,7 @@
     <string name="bienvenue_sur_beparent">Bienvenue sur BeParent !</string>
     <string name="onboarding">Onboarding</string>
     <string name="cute_egg">cute egg</string>
+    <string name="question_name">Mais avant de commencer, quel à qui ai-je l\'honneur ?</string>
+    <string name="validate">Valider</string>
+    <string name="registerText">Enchanté, %1$s ! Enregistre toi vite !</string>
 </resources>

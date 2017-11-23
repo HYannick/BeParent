@@ -2,19 +2,19 @@ package com.example.yhous.beparent.onboarding
 
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentStatePagerAdapter
-import com.example.yhous.beparent.ConnectFragment
-import com.example.yhous.beparent.OnboardingFragment
+import android.support.v4.view.PagerAdapter
+import android.util.Log
+import com.example.yhous.beparent.utils.SmartFragmentStatePagerAdapter
 
 /**
  * Created by yhous on 22/11/2017.
  */
-class BoardPagerAdapter(fragmentManager: FragmentManager, private val boards: ArrayList<Board>): FragmentStatePagerAdapter(fragmentManager) {
+class BoardPagerAdapter(fragmentManager: FragmentManager, private val boards: ArrayList<Board>): SmartFragmentStatePagerAdapter(fragmentManager) {
     override fun getItem(position: Int): Fragment {
-        if(position == 5) {
-            return OnboardingFragment.newInstance(boards[position])
+        return if(position == count - 1) {
+            ConnectFragment.newInstance(boards[position])
         } else {
-            return ConnectFragment.newInstance(boards[position])
+            OnboardingFragment.newInstance(boards[position], position)
         }
 
     }

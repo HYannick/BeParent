@@ -1,14 +1,58 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.yhous.beparent.ConnectFragment">
+    tools:context="com.example.yhous.beparent.onboarding.ConnectFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/question"
+    <com.example.yhous.beparent.utils.custom_components.HandleeTextView
+        android:id="@+id/question_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="82dp"
+        android:text="@string/question_name"
+        android:gravity="center"
+        android:textSize="@dimen/board_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.yhous.beparent.utils.custom_components.HandleeEditTextView
+        android:id="@+id/ed_username"
+        android:background="@drawable/circle_rectangle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:padding="16dp"
+        android:hint="Ton prénom"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/btn_auth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question_name" />
 
-</FrameLayout>
+    <com.example.yhous.beparent.utils.custom_components.HandleeButton
+        android:id="@+id/btn_auth"
+        android:background="@drawable/ic_btn_egg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="140dp"
+        android:text="@string/validate"
+        android:textAllCaps="false"
+        android:gravity="center|bottom"
+        android:paddingBottom="30dp"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question_name" />
+
+</android.support.constraint.ConstraintLayout>

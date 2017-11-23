@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:padding="20dp">
 
-    <TextView
+    <com.example.yhous.beparent.utils.custom_components.HandleeTextView
         android:id="@+id/top_text"
         style="?android:textAppearanceMedium"
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
         android:lineSpacingMultiplier="1.2"
         android:paddingBottom="16dp"
         android:text="@string/onboarding"
-        android:textSize="20dp" />
+        android:textSize="@dimen/board_text_size" />
 
     <ImageView
         android:id="@+id/cute_egg"
@@ -24,7 +24,7 @@
         android:contentDescription="@string/cute_egg"
         android:src="@drawable/tamagochi_board" />
 
-    <TextView
+    <com.example.yhous.beparent.utils.custom_components.HandleeTextView
         android:id="@+id/bottom_text"
         style="?android:textAppearanceMedium"
         android:layout_width="match_parent"
@@ -33,6 +33,6 @@
         android:lineSpacingMultiplier="1.2"
         android:paddingTop="16dp"
         android:text="@string/onboarding"
-        android:textSize="20dp" />
+        android:textSize="@dimen/board_text_size" />
 
 </LinearLayout>
