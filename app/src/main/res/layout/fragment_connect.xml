@@ -7,7 +7,7 @@
 
     <com.example.yhous.beparent.utils.custom_components.HandleeTextView
         android:id="@+id/question_name"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -22,7 +22,7 @@
     <com.example.yhous.beparent.utils.custom_components.HandleeEditTextView
         android:id="@+id/ed_username"
         android:background="@drawable/circle_rectangle"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
