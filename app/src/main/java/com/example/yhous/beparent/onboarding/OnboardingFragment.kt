@@ -3,16 +3,18 @@ package com.example.yhous.beparent.onboarding
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.content.Context
-import android.graphics.Typeface
-import android.util.Log
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.yhous.beparent.R
+import android.text.Html
+import android.text.Spanned
 
+
+@Suppress("DEPRECATION")
 /**
  * A simple [Fragment] subclass.
  */
@@ -42,36 +44,27 @@ class OnboardingFragment : Fragment() {
 
         // Pull args and set values
         val args = arguments
-        topTitle.text = args.getString(BoardHelper.TOP_TEXT)
+
         imgBoard.setImageResource(args.getInt(BoardHelper.RESOURCE_IMG))
         bottomTitle.text = args.getString(BoardHelper.BOTTOM_TEXT)
+
         val pos = args.getInt("position")
 
         if(pos == 0) {
-            Log.d("no", "noppp")
+            val beParent = args.getString(BoardHelper.TOP_TEXT).replace("Be", "<font color=#95D4FC>Be</font>")
+            val customTxt: Spanned = if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                Html.fromHtml(beParent, Html.FROM_HTML_MODE_LEGACY)
+            }  else {
+                Html.fromHtml(beParent)
+            }
+
+            topTitle.text = customTxt
             topTitle.textSize = 48f
         } else {
+            topTitle.text = args.getString(BoardHelper.TOP_TEXT)
             topTitle.textSize = 20f
         }
 
         return view
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-
-    }
-
-    override fun onAttach(context: Context?) {
-        super.onAttach(context)
-
     }
 }// Required empty public constructor

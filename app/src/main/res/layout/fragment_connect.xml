@@ -12,8 +12,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="82dp"
-        android:text="@string/question_name"
         android:gravity="center"
+        android:text="@string/question_name"
         android:textSize="@dimen/board_text_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,17 +21,17 @@
 
     <com.example.yhous.beparent.utils.custom_components.HandleeEditTextView
         android:id="@+id/ed_username"
-        android:background="@drawable/circle_rectangle"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/circle_rectangle"
         android:ems="10"
-        android:padding="16dp"
         android:hint="Ton prénom"
         android:inputType="textPersonName"
+        android:padding="16dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_auth"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,20 +39,21 @@
 
     <com.example.yhous.beparent.utils.custom_components.HandleeButton
         android:id="@+id/btn_auth"
-        android:background="@drawable/ic_btn_egg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="140dp"
-        android:text="@string/validate"
-        android:textAllCaps="false"
+        android:background="@drawable/ic_btn_egg"
         android:gravity="center|bottom"
         android:paddingBottom="30dp"
-        android:textSize="20sp"
+        android:text="@string/validate"
+        android:textAllCaps="false"
         android:textColor="#ffffff"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/question_name" />
+
 
 </android.support.constraint.ConstraintLayout>

@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/ic_btn_egg">
+    <item>
+        <shape
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thickness="8dp"
+            android:useLevel="false">
+            <solid android:color="@color/bpBlue"/>
+            <stroke android:color="@color/bpBlue" android:width="2dp"/>
+        </shape>
     </item>
 </layer-list>

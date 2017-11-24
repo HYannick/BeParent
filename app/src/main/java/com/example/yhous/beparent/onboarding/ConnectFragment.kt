@@ -4,6 +4,11 @@ package com.example.yhous.beparent.onboarding
 import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import com.transitionseverywhere.Fade
+import com.transitionseverywhere.Slide
+import com.transitionseverywhere.TransitionManager
+import com.transitionseverywhere.TransitionSet
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +19,7 @@ import com.example.yhous.beparent.R
 import com.example.yhous.beparent.auth.ConnectActivity
 import com.example.yhous.beparent.utils.custom_components.HandleeTextView
 import com.example.yhous.beparent.utils.AnimBehaviours
+import kotlinx.android.synthetic.main.fragment_connect.*
 
 
 /**
