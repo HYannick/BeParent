@@ -5,12 +5,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="center"
     tools:context="com.example.yhous.beparent.auth.ConnectActivity">
     <com.example.yhous.beparent.utils.custom_components.HandleeTextView
         android:id="@+id/tv_register"
         android:layout_width="match_parent"
         android:textSize="@dimen/board_text_size"
-        android:text="Enchanté"
+        android:layout_marginBottom="@dimen/medium_margin"
+        android:text="Enchanté Midget ! Enregistre toi vite !"
         android:gravity="center"
         android:layout_height="wrap_content" />
+    <com.example.yhous.beparent.utils.custom_components.HandleeEditTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_email"
+        android:inputType="textEmailAddress"
+        android:layout_marginBottom="12dp"
+        style="@style/RoundedInputs"/>
+    <com.example.yhous.beparent.utils.custom_components.HandleeEditTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_password"
+        android:inputType="textPassword"
+        style="@style/RoundedInputs"/>
+    <com.example.yhous.beparent.utils.custom_components.HandleeButton
+        android:id="@+id/btn_login"
+        style="@style/EggButton"
+        android:text="Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_margin"
+        />
+
 </LinearLayout>

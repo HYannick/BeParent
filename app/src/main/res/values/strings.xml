@@ -6,5 +6,7 @@
     <string name="cute_egg">cute egg</string>
     <string name="question_name">Mais avant de commencer, à qui ai-je l\'honneur ?</string>
     <string name="validate">Valider</string>
-    <string name="registerText">Enchanté, %1$s ! Enregistre toi vite !</string>
+    <string name="registerText">Enchanté, %1$s ! Enregistres-toi vite !</string>
+    <string name="hint_password">Ton mot de passe</string>
+    <string name="hint_email">Ton email</string>
 </resources>
