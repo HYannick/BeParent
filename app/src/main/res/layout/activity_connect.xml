@@ -17,6 +17,7 @@
         android:gravity="center"
         android:layout_height="wrap_content" />
     <com.example.yhous.beparent.utils.custom_components.HandleeEditTextView
+        android:id="@+id/email_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/hint_email"
@@ -24,6 +25,7 @@
         android:layout_marginBottom="12dp"
         style="@style/RoundedInputs"/>
     <com.example.yhous.beparent.utils.custom_components.HandleeEditTextView
+        android:id="@+id/password_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/hint_password"
@@ -37,5 +39,53 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/medium_margin"
         />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/id_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:hint="Search user"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View one User"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:id="@+id/view_one"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View DB Users"
+            android:padding="10dp"
+            android:layout_marginTop="16dp"
+            android:id="@+id/view_profiles"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            android:padding="10dp"
+            android:layout_marginTop="16dp"
+            android:id="@+id/update_profiles"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:padding="10dp"
+            android:layout_marginTop="16dp"
+            android:id="@+id/delete_profiles"/>
+    </LinearLayout>
+
 
 </LinearLayout>
