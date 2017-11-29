@@ -10,4 +10,5 @@
     <color name="bpGreen">#D6FBE4</color>
     <color name="bpPink">#E94E77</color>
     <color name="bpOrange">#FFC897</color>
+    <color name="white_background">#ffffff</color>
 </resources>

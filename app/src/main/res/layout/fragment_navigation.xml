@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.yhous.beparent.navigation.NavigationFragment">
+
+    <GridView
+        android:id="@+id/gv_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/navigation"
+        android:background="@drawable/menu_bg"
+        android:columnWidth="100dp"
+        android:horizontalSpacing="10dp"
+        android:numColumns="auto_fit"
+        android:paddingBottom="30dp"
+        android:stretchMode="spacingWidthUniform"
+        android:translationY="30dp"
+        android:verticalSpacing="24dp"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/menu_main_btn"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_above="@+id/navigation"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/ic_menu_ic"
+        android:elevation="80dp" />
+
+    <LinearLayout
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white_background"
+        android:elevation="70dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/go_board"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#00000000"
+            android:padding="15dp"
+            android:src="@drawable/ic_board" />
+
+        <ImageButton
+            android:id="@+id/go_profile"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#00000000"
+            android:src="@drawable/ic_heart" />
+
+        <ImageButton
+            android:id="@+id/go_notifications"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#00000000"
+            android:src="@drawable/ic_notification" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_rlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_background"
+    android:orientation="vertical"
+    tools:context="com.example.yhous.beparent.MainActivity">
+
+    <com.example.yhous.beparent.utils.custom_components.ObservableScrollView
+        android:id="@+id/observable_sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/main_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:alpha="0.3"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/main_background" />
+
+                <com.example.yhous.beparent.utils.custom_components.HandleeTextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Tu es à ton 150eme jour de grossesse !"
+                    android:textSize="25sp" />
+            </FrameLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_top_egg"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="-150dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/frameL"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/ic_main_arc" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/frameL"
+                    android:background="@color/white_background" />
+
+                <ImageButton
+                    android:id="@+id/egg_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="-90dp"
+                    android:background="#00000000"
+                    android:src="@drawable/ic_btn_egg"
+                    android:translationY="50dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/daily_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_background"
+                android:orientation="vertical">
+
+                <com.example.yhous.beparent.utils.custom_components.HandleeTextView
+                    style="@style/miniTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="L'astuce du jour" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_divider" />
+
+                <com.example.yhous.beparent.utils.custom_components.HandleeTextView
+                    android:id="@+id/daily_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Manges des pommes!"
+                    android:textSize="25sp" />
+
+                <com.example.yhous.beparent.utils.custom_components.HandleeTextView
+                    android:id="@+id/daily_content"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Les pommes abaissent le cholesterol. Une petite pomme contient environs 4 grammes de fibres ! Pourquoi se priver ?"
+                    android:textColor="@color/bpBlue"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/daily_news"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:background="@color/white_background"
+                android:orientation="vertical">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vp_news"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white_background" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:orientation="vertical">
+
+                <com.example.yhous.beparent.utils.custom_components.HandleeTextView
+                    style="@style/miniTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:gravity="center"
+                    android:text="Tes aventures" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_divider" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.example.yhous.beparent.utils.custom_components.ObservableScrollView>
+</RelativeLayout>

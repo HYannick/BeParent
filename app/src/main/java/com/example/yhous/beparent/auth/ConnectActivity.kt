@@ -1,13 +1,11 @@
 package com.example.yhous.beparent.auth
 
+import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Toast
 import com.example.yhous.beparent.MainActivity
 import com.example.yhous.beparent.R
-import com.example.yhous.beparent.db.BeParentDbAdapter
 import com.example.yhous.beparent.db.BeParentDbHelper
 import com.example.yhous.beparent.db.Message
 import com.example.yhous.beparent.utils.AnimBehaviours
@@ -18,13 +16,26 @@ class ConnectActivity : AppCompatActivity() {
   private lateinit var pseudo: String
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    pseudo = intent.getStringExtra("pseudo")
+    val sharedPref = getSharedPreferences("beParentData", Context.MODE_PRIVATE)
+    val firstCon = sharedPref.getBoolean("firstCon", true)
+
     setContentView(R.layout.activity_connect)
-    tv_register.text = Helpers.setTextColor(getString(R.string.registerText, pseudo), "#95D4FC", pseudo)
+
+    if(firstCon && intent.hasExtra("pseudo")) {
+      pseudo = intent.getStringExtra("pseudo")
+      tv_register.text = Helpers.setTextColor(getString(R.string.registerText, pseudo), "#95D4FC", pseudo)
+    } else {
+      tv_register.text = getString(R.string.connexionText)
+    }
+
     btn_login.setOnClickListener {
       AnimBehaviours.animateBtn(btn_login, this, 90L)
       addUser()
     }
+  }
+
+  fun login() {
+
   }
 
   fun addUser() {
@@ -40,6 +51,15 @@ class ConnectActivity : AppCompatActivity() {
       val intent = Intent(this, MainActivity::class.java)
       startActivity(intent)
     }
+
+    // Store in sharedPreference
+    val sharedPreferences = getSharedPreferences("beParentData", Context.MODE_PRIVATE)
+    val editor = sharedPreferences.edit()
+    editor.putBoolean("firstCon", false)
+    editor.putString("username", pseudo)
+    editor.putString("email", email)
+    editor.putString("password", password)
+    editor.apply()
   }
 
 //  fun viewUser() {

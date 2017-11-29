@@ -28,7 +28,8 @@
                 android:value=".MainActivity" />
         </activity>
         <activity android:name=".onboarding.OnBoardingActivity" />
-        <activity android:name=".auth.ConnectActivity"></activity>
+        <activity android:name=".auth.ConnectActivity" />
+        <activity android:name=".HealthFollowup"></activity>
     </application>
 
 </manifest>
