@@ -1,6 +1,7 @@
 package com.example.yhous.beparent.board
 
 
+import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.view.ViewPager
@@ -8,9 +9,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-
 import com.example.yhous.beparent.R
-import com.example.yhous.beparent.navigation.NavigationFragment
+import com.example.yhous.beparent.navigation.SwitchFragments
 import com.example.yhous.beparent.news.NewsHelper
 import com.example.yhous.beparent.news.NewsPagerAdapter
 import com.example.yhous.beparent.utils.AnimBehaviours
@@ -22,7 +22,7 @@ import kotlinx.android.synthetic.main.fragment_board.*
  * A simple [Fragment] subclass.
  */
 class BoardFragment : Fragment(), ObservableScrollView.OnScrollChangedListener  {
-
+  private lateinit var listener: SwitchFragments
   lateinit var viewPager: ViewPager
   lateinit var pagerAdapter: NewsPagerAdapter
   companion object {
@@ -37,6 +37,7 @@ class BoardFragment : Fragment(), ObservableScrollView.OnScrollChangedListener  
     val observable_sv = view.findViewById<ObservableScrollView>(R.id.observable_sv)
     val egg_status = view.findViewById<ImageView>(R.id.egg_status)
     observable_sv.setOnScrollChangedListener(this)
+
     egg_status.setOnClickListener {
       AnimBehaviours.animateBtn(egg_status, activity, 90L)
     }
@@ -52,4 +53,12 @@ class BoardFragment : Fragment(), ObservableScrollView.OnScrollChangedListener  
     main_background.translationY = scrollY * 0.5f
   }
 
+  override fun onAttach(context: Context?) {
+    super.onAttach(context)
+    if (context is SwitchFragments) {
+      listener = context
+    } else {
+      throw ClassCastException(context.toString() + " must implement OnRageComicSelected.")
+    }
+  }
 }// Required empty public constructor
